@@ -1,0 +1,34 @@
+= Pivotal Cloud Foundry 101 Workshop for NodeJS Developers
+
+== Schedule
+
+This one day hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
+
+10:15 AM - 11:00 AM
+ * Session 1: _Introduction to Pivotal Cloud Foundry_
+11:00 AM - 11:15 AM:: Break
+11:15 AM - 12:15 PM:: 
+ * Session 2: _Cloud Foundry Architecture & Operations_
+12:15 PM - 1:00 PM:: Working Lunch
+ * Lunch provided by Pivotal
+ * Session 3: _NodeJS Development on PCF_
+1:00 PM - 3:45
+ * Developer Workshop: _Pushing Code w/PCF_
+3:45 PM - 4:00 PM:: Wrap Up, Q/A, Feedback
+
+== Course Materials
+
+* Session 1: link:decks/Intro-Pivotal.pptx[Introduction]
+* Session 2: link:decks/PCF-Architecture.pptx[Pivotal Cloud Foundry Architecture and Operations]
+* Session 3: link:decks/NodeJS-Dev-Guide.pptx[NodeJS Dev Guide]
+
+* Developer Workshop
+** Pre-work
+*** link:labs/labaccess.adoc[Get Environment Access]
+** Lab 1 - From Zero to Pushing Your First Application
+*** link:labs/lab1/README.adoc[**NodeJS** Application]
+** link:labs/lab2/lab.adoc[Lab 2 - Binding to Cloud Foundry Services]
+** link:labs/lab3/lab.adoc[Lab 3 - Operating Your Application]
+** link:labs/lab4/lab.adoc[Lab 4 - Monitoring Your Application]
+** Advanced Lab - Jenkins Integration
+*** link:labs/lab5/continuous-delivery-lab.adoc[NodeJS Application]

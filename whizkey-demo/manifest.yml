@@ -1,0 +1,8 @@
+---
+applications:
+- name: whizkey
+  memory: 256M
+  instances: 2
+  services:
+    - whizkey-db
+    - whizkey-cache

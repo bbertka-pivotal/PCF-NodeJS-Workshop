@@ -1,0 +1,7 @@
+---
+applications:
+- name: nodejs
+  host: node-sample1
+  memory: 128M
+  instances: 1
+  path: .

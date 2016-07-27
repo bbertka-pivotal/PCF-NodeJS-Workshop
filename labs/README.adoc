@@ -1,0 +1,45 @@
+= PCF Environment Access
+
+== Account set up and Pre-work
+
+. If you do not have an account yet, please log into Apps Manager with MyID
+
+. Navigate in a web browser to https://apps.system.pivotalpoc.hosts.disney.pvt
+
+. Click the MyID link and log-in using SSO.
++
+image:login.png[]
+
+. The interface will show you do not have ORG permission. Take a screenshot.
++
+image:appsmanager.png[]
+
+. Wait a few moments and refresh, click the Org name in the upper left corner of the interface
+. If you still dont see your Org after login, send an email to the instructor: bbertka@pivotal.io
+. In your email, request access to your developer space and be sure to include your BU (ABC, Parks, Studios, etc)
+
+== Target the Environment
+
+. If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
+
+. Set the API target for the CLI: (set appropriate end point for your environment)
++
+----
+$ cf login -a api.system.pivotalpoc.hosts.disney.pvt -sso --skip-ssl-validation
+----
+
+. You will be promoted for a one time passcode from a URL; enter it at the prompt
+
+. Follow the prompts
+
+== Apps Manager UI
+
+. An alternative to installing the CF CLI is via your PCF Apps Manager interface.
+
+. Navigate in a web browser to https://apps.system.pivotalpoc.hosts.disney.pvt
+
+. Login to the interface with MyID
+
+. Click the 'Tools' link, and download the CLI matching your operating system
+
+. Install the CLI

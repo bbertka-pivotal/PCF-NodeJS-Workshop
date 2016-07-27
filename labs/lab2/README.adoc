@@ -18,10 +18,10 @@ Your instance of the _rabbitmq-sample_ app should not be running. Make sure to c
 
 ----
 $ cd rabbitmq-sample
-$ cf push
+$ cf push --no-start
 ----
 
-Watch the logs, your application will fail to start because it cannot bind to the rabbit service which we have not yet created -- the app is simple and will wail if it cant find the service.
+Watch the logs, your application will upload and not start.
 
 == The Services Marketplace
 
@@ -48,7 +48,8 @@ image::lab2.png[]
 == Creating and Binding to a Service Instance
 
 . Let's begin by creating a RabbitMQ service instance.
-From the Apps Manager UI service marketplace, select _RabbitMQ for Pivotal Cloudfoundry_, select the *standard plan*, and provide an instance name *rabbit-sample*
+From the Apps Manager UI, click your space on the left of the screen.  You will see your list of apps.  Select the *Service* tab and select *Add Service*
+From the marketplace, select _RabbitMQ for Pivotal Cloudfoundry_, select the *standard plan*, and provide an instance name *rabbit-sample*
 In the drop-down list next to _Bind to App_ select your _rabbitmq_ application.
 +
 image::lab3.png[]

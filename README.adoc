@@ -9,8 +9,7 @@ This one day hands-on classroom style session will provide developers (and opera
 11:00 AM - 11:15 AM:: Break
 11:15 AM - 12:15 PM:: 
  * Session 2: _Cloud Foundry Architecture & Operations_
-12:15 PM - 1:00 PM:: Working Lunch
- * Lunch provided by Pivotal
+12:15 PM - 1:00 PM:: Working Lunch (provided by Pivotal)
  * Session 3: _NodeJS Development on PCF_
 1:00 PM - 3:45::
  * Developer Workshop: _Pushing Code w/PCF_

@@ -31,5 +31,5 @@ This one day hands-on classroom style session will provide developers (and opera
 ** link:labs/lab4/README.adoc[Lab 4 - Monitoring Your Application - BETA]
 ** link:labs/lab5/README.md[Lab 5 - Create a Ghost Blog with MySQL Service]
 ** link:labs/lab6/README.md[Lab 6 - Managing Data with phpMyAdmin]
-** Advanced Lab - Jenkins Integration (Java)
+** Advanced Lab - Jenkins Integration (NodeJS)
 *** link:labs/lab7/continuous-delivery-lab.adoc[NodeJS Application]

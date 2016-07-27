@@ -1,0 +1,43 @@
+{
+  "name": "phpmyadmin/phpmyadmin",
+  "type": "application",
+  "description": "MySQL web administration tool",
+  "keywords": [
+    "phpmyadmin",
+    "mysql",
+    "web"
+  ],
+  "homepage": "http://www.phpmyadmin.net/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "The phpMyAdmin Team",
+      "email": "phpmyadmin-devel@lists.sourceforge.net",
+      "homepage": "http://www.phpmyadmin.net/home_page/team.php"
+    }
+  ],
+  "support": {
+    "forum": "https://sourceforge.net/p/phpmyadmin/discussion/Help",
+    "issues": "https://sourceforge.net/p/phpmyadmin/bugs/",
+    "wiki": "http://wiki.phpmyadmin.net/",
+    "source": "https://github.com/phpmyadmin/phpmyadmin"
+  },
+  "require": {
+    "php": "5.5.*",
+    "ext-mbstring": "*",
+    "ext-mysqli": "*",
+    "ext-mcrypt": "*",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-gd": "*",
+    "ext-zip": "*",
+    "cloudfoundry-community/cf-helper-php": "1.4.*",
+    "monolog/monolog": "~1.13"
+  },
+  "require-dev": {
+    "satooshi/php-coveralls": ">=0.6",
+    "phpunit/phpunit": "<4.2",
+    "phpunit/phpunit-selenium": ">=1.2",
+    "scrutinizer/ocular": ">=1.0.0"
+  }
+}

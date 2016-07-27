@@ -1,0 +1,23 @@
+root:
+    _type: array
+    _children:
+        requis:
+            _type: text
+            _required: true
+        pas vide:
+            _type: text
+            _not_empty: true
+        tableau:
+            _type: array
+            _not_empty: true
+            _required: true
+            _ignore_extra_keys: true
+            _children:
+                index:
+                    _type: text
+        repetition:
+            _type: prototype
+            _min_items: 1
+            _max_items: 3
+            _prototype:
+                _type: number

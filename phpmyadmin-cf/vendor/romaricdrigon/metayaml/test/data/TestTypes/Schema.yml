@@ -1,0 +1,147 @@
+root:
+    _type: array
+    _children:
+        # a few simple examples
+        texte:
+            _type: text
+        multi_ligne:
+            _type: text
+        enume:
+            _type: enum
+            _values:
+                - windows
+                - linux
+        nombre:
+            _type: number
+        booleen:
+            _type: boolean
+        paragraph:
+            _type: partial
+            _partial: block
+        regex:
+            _type: pattern
+            _pattern: /e/
+        prototype_bool:
+            _type: prototype
+            _prototype:
+                _type: boolean
+        # a choice : more verbose
+        # our content can be any of the child nodes
+        test_choice:
+            _type: choice
+            _choices:
+                1:
+                    _type: enum
+                    _values:
+                        - windows
+                        - linux
+                2:
+                    _type: number
+                3:
+                    _type: array
+                    _children:
+                        one_item:
+                            _type: number
+                        another_item:
+                            _type: text
+        # more advanced stuff
+        prototype_array:
+            _type: prototype
+            _prototype:
+                _type: array
+                _children:
+                    texte:
+                        _type: text
+                        _required: true
+        choice_of_partial:
+            _type: choice
+            _choices:
+                1:
+                    _type: partial
+                    _partial: line
+                2:
+                    _type: partial
+                    _partial: line
+        array_of_partial:
+            _type: array
+            _children:
+                1:
+                    _type: partial
+                    _partial: line
+                2:
+                    _type: partial
+                    _partial: line
+        prototype_partial:
+            _type: prototype
+            _prototype:
+                _type: partial
+                _partial: line
+        choice_of_choice:
+            _type: choice
+            _choices:
+                0:
+                    _type: array
+                    _children:
+                        a:
+                            _type: choice
+                            _choices:
+                                10:
+                                    _type: array
+                                    _children:
+                                        b:
+                                            _type: text
+        deep_partial:
+            _type: array
+            _children:
+                a:
+                    _type: choice
+                    _choices:
+                        0:
+                            _type: partial
+                            _partial: partial_of_partial
+                b:
+                    _type: partial
+                    _partial: array_of_partial
+        # next is for some exceptions tests
+        # it's a not defined partial
+        # do not declare it in your schema!
+        wrong_partial:
+            _type: partial
+            _partial: unknown
+        loop_partial:
+            _type: array
+            _children:
+                a:
+                    _type: partial
+                    _partial: loop_partial
+partials:
+    block:
+        _type: array
+        _children:
+            line_1:
+                _type: text
+            line_2:
+                _type: text
+    line:
+        _type: text
+    partial_of_partial:
+        _type: partial
+        _partial: line
+    array_of_partial:
+        _type: array
+        _children:
+            block:
+                _type: partial
+                _partial: block
+            line:
+                _type: partial
+                _partial: partial_of_partial
+            protoline:
+                _type: prototype
+                _prototype:
+                    _type: partial
+                    _partial: line
+    # wrong, do not use!
+    loop_partial:
+        _type: partial
+        _partial: loop_partial

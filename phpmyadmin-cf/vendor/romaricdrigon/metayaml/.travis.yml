@@ -1,0 +1,9 @@
+# set up languages
+language: php
+php:
+  - "5.4"
+  - "5.3"
+# we use composer for vendors, including atoum
+before_script:
+ - composer install
+script: ./bin/test --test-all

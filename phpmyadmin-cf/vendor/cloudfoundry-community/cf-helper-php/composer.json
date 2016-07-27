@@ -1,0 +1,35 @@
+{
+  "name": "cloudfoundry-community/cf-helper-php",
+  "description": "Cloudfoundry helper in php",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+    "cloudfoundry",
+    "helper",
+    "services",
+    "vcapservices"
+  ],
+  "authors": [
+    {
+      "name": "Arthur Halet",
+      "email": "arthur.halet@orange.com"
+    }
+  ],
+  "require": {
+    "sphring/sphring": "0.11.*",
+    "filp/whoops": "~1.1",
+    "symfony/yaml": "~2.5",
+    "monolog/monolog": "~1.13"
+  },
+  "require-dev": {
+    "predis/predis": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CfCommunity\\CfHelper\\": "src/CfCommunity/CfHelper/"
+    }
+  },
+  "suggest": {
+    "predis/predis": "Let's you have a redis conection for RedisConnector"
+  }
+}

@@ -1,0 +1,21 @@
+texte: bla bla bla
+multi_ligne: |
+    bla bla bla
+    bla bla bla
+    and meh
+enume: linux
+nombre: 15
+booleen: false
+prototype_bool:
+    any_value: true
+    other_value: false
+prototype_array:
+    first_array:
+        texte: bla bla
+    second_array:
+        texte: bla bla
+paragraph:
+    line_1: some text
+    line_2: more text
+test_choice: 5
+regex: essai

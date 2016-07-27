@@ -1,0 +1,12 @@
+root:
+    _type: array
+    _children:
+        fleurs:
+            _type: array
+            _required: true
+            _children:
+                rose:
+                    _required: true
+                    _type: text
+                violette:
+                    _type: text

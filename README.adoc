@@ -28,7 +28,7 @@ This one day hands-on classroom style session will provide developers (and opera
 *** link:labs/lab1/README.adoc[**NodeJS** Application]
 ** link:labs/lab2/README.adoc[Lab 2 - Binding Services: A RabbitMQ Example]
 ** link:labs/lab3/README.adoc[Lab 3 - Operating Your Application]
-** link:labs/lab4/README.adoc[Lab 4 - Monitoring Your Application - BETA - SSO not supported yet]
+** link:labs/lab4/README.adoc[Lab 4 - Monitoring Your Application - BETA]
 ** link:labs/lab5/README.md[Lab 5 - Create a Ghost Blog with MySQL Service]
 ** link:labs/lab6/README.md[Lab 6 - Managing Data with phpMyAdmin]
 ** Advanced Lab - Jenkins Integration (Java)

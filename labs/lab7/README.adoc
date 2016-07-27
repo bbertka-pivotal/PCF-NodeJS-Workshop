@@ -17,7 +17,7 @@ https://github.com/bbertka-pivotal/nodejs-cf-sample-app.git
 
 == Create the Build Job
 
-. Click *New Item*, give it the name *nodejs-sample* and select ``Build a free-style software project.'' Then click +OK+.
+. Click *New Item*, give it the name *nodejs-sample* and select _Build a free-style software project_. Then click +OK+.
 
 == Configure Git
 

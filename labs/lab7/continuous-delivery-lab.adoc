@@ -6,9 +6,9 @@ This lab will guide you through building a *BASIC* continuous delivery pipeline 
 
 == Initial Setup
 
-. Fork the Spring-Music repository. If you do not have a github account, you can use this repo
+. Fork the NodeJS Sample App repository. If you do not have a github account, you can use this repo
 
-https://github.com/cloudfoundry-samples/spring-music.git
+https://github.com/bbertka-pivotal/nodejs-cf-sample-app.git
 
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
@@ -17,30 +17,26 @@ https://github.com/cloudfoundry-samples/spring-music.git
 
 == Create the Build Job
 
-. Click *New Item*, give it the name *spring-music* and select ``Build a free-style software project.'' Then click +OK+.
+. Click *New Item*, give it the name *nodejs-sample* and select ``Build a free-style software project.'' Then click +OK+.
 
 == Configure Git
 
-. Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/spring-music`). Leave credentials as *none*.
-. If you weren't able to fork Spring-Music, just use https://github.com/cloudfoundry-samples/spring-music
+. Under *Source Code Management*, select *Git*, and supply your repository URL (e.g. `https://github.com/<YOUR_GIT_USERNAME>/nodejs-cf-sample-app`). Leave credentials as *none*.
+. If you weren't able to fork the sample app, just use https://github.com/bbertka-pivotal/nodejs-cf-sample-app.git
 
-== Configure Gradle Build
-
-. Select *Add Build Step* and then *Invoke Gradle Script*.
-
-. Select *Use Grade Wrapper*.
-
-. Check both *Make gradlew executable* and *From Root Build Script Directory*.
-
-. In switches, enter `-Pbuildversion=$BUILD_NUMBER`.
-
-. In tasks, enter `clean assemble`.
-
-. In build file, enter `build.gradle`.
-
-. Check *Force GRADLE_USER_HOME to use workspace.
+== Configure Build Triggers
 
 . On "Build Triggers", select "Build when a change is pushed to GitHub"
+. On "Build Triggers", select "Poll SCM", and poll for changes each minute by entering */1 * * * * 
+
+== Configure Build Environment
+
+. Check the box "Delete workspace before build starts"
+. Check the box "Provide Node & npm bin/ folder to PATH", and select Installation: NodeJS 6.2.2
+
+== Execute Shell
+
+. Enter in the text box: *npm install*
 
 == Execute Shell
 [source,bash]
@@ -59,21 +55,10 @@ export API=https://api.system.pivotalpoc.hosts.disney.pvt
 # Set current target api to API
 cf api --skip-ssl-validation $API
 
-# Use the jenkins_sercice credentials here to login to your org and space
+# Use the jenkins_service credentials here to login to your org and space
 cf login -u jenkins_service -p cl0udc0w -o YourOrg -s YourSpace
 
-# Create an instance of the mysql service
-cf create-service p-mysql 100mb spring-music-db
-
-# Create/Update the spring-music app using the versioned manifest.yml, but dont start
-cf push spring-music -n spring-music-dtss -f manifest.yml --no-start
-
-# Bind the application to the service instance
-cf bind-service spring-music spring-music-db
-
-# Start the application
-cf start spring-music
-
+cf push -f manifest.yml
 ----
 
 

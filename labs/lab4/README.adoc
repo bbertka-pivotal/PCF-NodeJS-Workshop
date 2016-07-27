@@ -258,4 +258,4 @@ time                          event                 actor      description
 
 
 == On to the next Lab!
-link:../../labs/lab5/README.adoc[Lab5 - Continuous Delivery with Jenkins]
+link:../../labs/lab5/README.md[Lab5 - Create a Ghost Blog with MySQL]

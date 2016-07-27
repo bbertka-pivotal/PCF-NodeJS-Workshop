@@ -18,82 +18,14 @@ The project is maintained by a non-profit organisation called the **Ghost Founda
 **NOTE: If you’re stuck, can’t get something working or need some help, please head on over and join our [Slack community](https://ghost.org/slack/) rather than opening an issue.**
 
 
-# Quick Start Install
-
-Make sure you've installed Node.js - We recommend the latest **Node v0.10.x** release. For other versions [click here](http://support.ghost.org/supported-node-versions/). May contain nuts.
-
-1. Download the [latest release](https://ghost.org/download/) of Ghost
-1. Unzip in the location you want to install
-1. Fire up a terminal
-1. `npm install --production`
-1. Start Ghost!
-    - Local environment: `npm start`
-    - On a server: `npm start --production`
-1. `http://localhost:2368/ghost` :tada:
-
-More [install docs](http://support.ghost.org/installation/) here in case you got stuck.
-
-<a name="getting-started"></a>
-# Developer Install (from git)
-
-Install Node.js. (See [Supported Node.js versions](http://support.ghost.org/supported-node-versions/))
-
-```bash
-# Node v0.10.x - recommended
-# Node v0.12.x and v4.2+ LTS - supported
-#
-# Choose wisely
-```
-
-Clone :ghost:
-
-```bash
-git clone git://github.com/tryghost/ghost.git
-cd ghost
-```
-
-Install grunt. No prizes here.
-
-```bash
-npm install -g grunt-cli
-```
-
-Install Ghost. If you're running locally, use [master](https://github.com/TryGhost/Ghost/tree/master). For production, use [stable](https://github.com/TryGhost/Ghost/tree/stable). :no_entry_sign::rocket::microscope:
-
-```bash
-npm install
-```
-
-Build the things!
-
-```bash
-grunt init
-```
-
-Minify that shit for production?
-
-```bash
-grunt prod
-```
-
-Start your engines.
-
-```bash
-npm start
-
-## running production? Add --production
-```
-
-Congrats! You made it. BTW you can also just `npm install ghost` if you're into that sort of thing. NPM aficionados can also read up on using [Ghost as an NPM module](https://github.com/TryGhost/Ghost/wiki/Using-Ghost-as-an-npm-module).
-
-More general [install docs](http://support.ghost.org/installation/) here in case you got stuck.
-
-
 # Deploying Ghost to Cloud Foundry
 
 ```bash
-cf create-service
+cf create-service p-mysql 100mb ghost-db
+cf cups gmail -p '{"user":"gmail email address","pass":"my gmail password"}'
 cf push
+
+Log into your blog at the /admin endpoint
 ```
 
 
@@ -111,3 +43,7 @@ New releases are announced on the [dev blog](http://dev.ghost.org/tag/releases/)
 # Copyright & License
 
 Copyright (c) 2013-2016 Ghost Foundation - Released under the [MIT license](LICENSE).
+
+
+# On to the next Lab!
+[Lab6 - Managing Your Database](../../labs/lab6/README.md)

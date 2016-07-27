@@ -21,6 +21,7 @@ The project is maintained by a non-profit organisation called the **Ghost Founda
 # Deploying Ghost to Cloud Foundry
 
 ```bash
+cd ghost-blog
 cf create-service p-mysql 100mb ghost-db
 cf cups gmail -p '{"user":"gmail email address","pass":"my gmail password"}'
 cf push
@@ -43,3 +44,7 @@ New releases are announced on the [dev blog](http://dev.ghost.org/tag/releases/)
 # Copyright & License
 
 Copyright (c) 2013-2016 Ghost Foundation - Released under the [MIT license](LICENSE).
+
+
+# On to the next Lab!
+[Lab6 - Managing Your Database](../labs/lab6/README.md)

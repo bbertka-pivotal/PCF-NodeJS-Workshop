@@ -21,6 +21,7 @@ The project is maintained by a non-profit organisation called the **Ghost Founda
 # Deploying Ghost to Cloud Foundry
 
 ```bash
+cd ghost-blog
 cf create-service p-mysql 100mb ghost-db
 cf cups gmail -p '{"user":"gmail email address","pass":"my gmail password"}'
 cf push

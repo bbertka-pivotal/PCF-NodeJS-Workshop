@@ -2,7 +2,7 @@
 
 [abstract]
 --
-The _Workshop_ application was designed to illustrate the ease with which data services can be bound to and utilized by applications running on Cloud Foundry.
+The _NodeJS-Sample_ application was designed to illustrate the ease with which data services can be bound to and utilized by applications running on Cloud Foundry.
 In this lab, we'll be binding the application to a RabbitMQ.
 
 Cloud Foundry services are managed through two primary types of operations:

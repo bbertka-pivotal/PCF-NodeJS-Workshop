@@ -1,7 +1,7 @@
 ---
 applications:
-- name: nodejs
-  host: node-sample1
+- name: nodejs-sample
+  host: node-sample-${random-word}
   memory: 128M
   instances: 1
   path: .
